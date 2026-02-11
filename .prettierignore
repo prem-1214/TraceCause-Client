@@ -1,0 +1,22 @@
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+build
+.vite
+*.tsbuildinfo
+
+# Git hooks
+.husky
+
+# Config files (often auto-generated or maintained separately)
+package-lock.json
+
+# Environment files
+.env
+.env.*
+
+# IDE
+.vscode
+.idea

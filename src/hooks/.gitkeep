@@ -1,0 +1,2 @@
+# This file ensures the directory structure is preserved in Git
+# Git doesn't track empty directories, so we add this .gitkeep file
