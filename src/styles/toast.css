@@ -1,0 +1,199 @@
+/* Base Toast Styling */
+.custom-toast {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  min-width: 320px;
+  max-width: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideIn 0.3s ease-out;
+}
+
+[data-sonner-toast][data-expanded="true"] {
+  height: auto !important;
+}
+
+[data-sonner-toast][data-expanded="false"] {
+  height: auto !important;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Progress Timer Line */
+.custom-toast::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: currentColor;
+  opacity: 0.3;
+  animation: progress 4s linear forwards;
+  border-radius: 0 0 12px 12px;
+}
+
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+/* Success Toast - Full Green Background */
+.custom-toast-success {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  border: none !important;
+  color: #ffffff !important;
+  padding: 5px !important;
+}
+
+.custom-toast-success::before {
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+}
+.custom-toast-success .custom-toast-title {
+  color: #ffffff !important;
+}
+
+.custom-toast-success .custom-toast-description {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Error Toast - Full Red Background */
+.custom-toast-error {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  border: none !important;
+}
+
+.custom-toast-error::before {
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+}
+.custom-toast-error .custom-toast-title {
+  color: #ffffff !important;
+}
+
+.custom-toast-error .custom-toast-description {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Warning Toast - Full Orange Background */
+.custom-toast-warning {
+  background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+  border: none !important;
+  color: #ffffff !important;
+}
+
+.custom-toast-warning::before {
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+}
+.custom-toast-warning .custom-toast-title {
+  color: #ffffff !important;
+}
+
+.custom-toast-warning .custom-toast-description {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Info Toast - Full Blue Background */
+.custom-toast-info {
+  background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+  border: none !important;
+  color: #ffffff !important;
+}
+
+.custom-toast-info::before {
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+}
+.custom-toast-info .custom-toast-title {
+  color: #ffffff !important;
+}
+
+.custom-toast-info .custom-toast-description {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Title and Description */
+.custom-toast-title {
+  font-weight: 600;
+  font-size: 20px;
+  color: #1f2937;
+  margin: 0;
+  padding-right: 36px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  flex: 1;
+}
+
+.custom-toast-description {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  flex: 1;
+}
+
+/* Close Button Styling - Top Right Position */
+.custom-toast button[data-close-button] {
+  position: absolute !important;
+  top: 8px !important;
+  right: 8px !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: none !important;
+  color: #ffffff !important;
+  padding: 6px !important;
+  border-radius: 50% !important;
+  width: 28px !important;
+  height: 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+  opacity: 0.8 !important;
+  transform: scale(1) !important;
+  will-change: transform, opacity !important;
+}
+
+.custom-toast button[data-close-button]:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  opacity: 1 !important;
+}
+
+.custom-toast button[data-close-button] svg {
+  color: #ffffff !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* Enhance glassmorphism effect */
+.custom-toast-success,
+.custom-toast-error,
+.custom-toast-warning,
+.custom-toast-info {
+  backdrop-filter: blur(10px);
+}
