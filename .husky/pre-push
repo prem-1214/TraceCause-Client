@@ -1,0 +1,4 @@
+echo "Running full quality checks before push..."
+echo ""
+
+npm run check-all
