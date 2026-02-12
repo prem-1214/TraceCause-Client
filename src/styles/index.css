@@ -1,1 +1,182 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* === Root Level Theme === */
+:root {
+  --c-primary: 59 130 246;
+  --c-secondary: 139 92 246;
+  --c-accent: 236 72 153;
+  --c-background: 255 255 255;
+  --c-foreground: 15 23 42;
+  --c-card: 248 250 252;
+  --c-border: 226 232 240;
+
+  /* Status colors */
+  --c-success: 34 197 94;
+  --c-error: 239 68 68;
+  --c-warning: 251 191 36;
+  --c-info: 59 130 246;
+}
+
+/* === Default Light Theme === */
+[data-theme="default"][data-mode="light"] {
+  --c-primary: 59 130 246;
+  --c-secondary: 139 92 246;
+  --c-accent: 236 72 153;
+  --c-background: 255 255 255;
+  --c-foreground: 15 23 42;
+  --c-card: 248 250 252;
+  --c-border: 226 232 240;
+
+  --c-success: 34 197 94; /* green-500 */
+  --c-error: 239 68 68; /* red-500 */
+  --c-warning: 251 191 36; /* amber-400 */
+  --c-info: 59 130 246; /* blue-500 */
+}
+
+/* === Default Dark Theme === */
+[data-theme="default"][data-mode="dark"] {
+  --c-primary: 96 165 250;
+  --c-secondary: 167 139 250;
+  --c-accent: 244 114 182;
+  --c-background: 15 23 42;
+  --c-foreground: 248 250 252;
+  --c-card: 30 41 59;
+  --c-border: 51 65 85;
+
+  --c-success: 74 222 128; /* green-400 */
+  --c-error: 248 113 113; /* red-400 */
+  --c-warning: 251 191 36; /* amber-400 */
+  --c-info: 96 165 250; /* blue-400 */
+}
+
+/* ======= Preset Themes === */
+
+/* === Ocean Theme Light ===  */
+[data-theme="ocean"][data-mode="light"] {
+  --c-primary: 14 165 233;
+  --c-secondary: 6 182 212;
+  --c-accent: 20 184 166;
+  --c-background: 240 249 255;
+  --c-foreground: 12 74 110;
+  --c-card: 224 242 254;
+  --c-border: 186 230 253;
+
+  --c-success: 20 184 166; /* teal-500 */
+  --c-error: 239 68 68; /* red-500 */
+  --c-warning: 251 191 36; /* amber-400 */
+  --c-info: 14 165 233; /* sky-500 */
+}
+
+/* === Ocean Theme Dark ===  */
+[data-theme="ocean"][data-mode="dark"] {
+  --c-primary: 56 189 248;
+  --c-secondary: 34 211 238;
+  --c-accent: 45 212 191;
+  --c-background: 8 47 73;
+  --c-foreground: 224 242 254;
+  --c-card: 12 74 110;
+  --c-border: 14 116 144;
+
+  --c-success: 45 212 191; /* teal-400 */
+  --c-error: 248 113 113; /* red-400 */
+  --c-warning: 252 211 77; /* amber-300 */
+  --c-info: 56 189 248; /* sky-400 */
+}
+
+/* === Forest Theme Light ===  */
+[data-theme="forest"][data-mode="light"] {
+  --c-primary: 34 197 94;
+  --c-secondary: 132 204 22;
+  --c-accent: 74 222 128;
+  --c-background: 240 253 244;
+  --c-foreground: 20 83 45;
+  --c-card: 220 252 231;
+  --c-border: 187 247 208;
+
+  --c-success: 34 197 94; /* green-500 */
+  --c-error: 239 68 68; /* red-500 */
+  --c-warning: 251 191 36; /* amber-400 */
+  --c-info: 59 130 246; /* blue-500 */
+}
+
+/* === Forest Theme Dark ===  */
+[data-theme="forest"][data-mode="dark"] {
+  --c-primary: 74 222 128;
+  --c-secondary: 163 230 53;
+  --c-accent: 134 239 172;
+  --c-background: 20 83 45;
+  --c-foreground: 240 253 244;
+  --c-card: 22 101 52;
+  --c-border: 34 197 94;
+
+  --c-success: 74 222 128; /* green-400 */
+  --c-error: 248 113 113; /* red-400 */
+  --c-warning: 252 211 77; /* amber-300 */
+  --c-info: 96 165 250; /* blue-400 */
+}
+
+/* === Sunset Theme Light ===  */
+[data-theme="sunset"][data-mode="light"] {
+  --c-primary: 249 115 22;
+  --c-secondary: 234 88 12;
+  --c-accent: 251 146 60;
+  --c-background: 255 251 235;
+  --c-foreground: 67 20 7;
+  --c-card: 254 243 199;
+  --c-border: 253 186 116;
+
+  --c-success: 34 197 94; /* green-500 */
+  --c-error: 239 68 68; /* red-500 */
+  --c-warning: 251 146 60; /* orange-400 */
+  --c-info: 59 130 246; /* blue-500 */
+}
+
+/* === Sunset Theme Dark ===  */
+[data-theme="sunset"][data-mode="dark"] {
+  --c-primary: 251 146 60;
+  --c-secondary: 249 115 22;
+  --c-accent: 253 186 116;
+  --c-background: 67 20 7;
+  --c-foreground: 254 243 199;
+  --c-card: 124 45 18;
+  --c-border: 194 65 12;
+
+  --c-success: 74 222 128; /* green-400 */
+  --c-error: 248 113 113; /* red-400 */
+  --c-warning: 251 146 60; /* orange-400 */
+  --c-info: 96 165 250; /* blue-400 */
+}
+
+@theme {
+  --color-primary: rgb(var(--c-primary) / <alpha-value>);
+  --color-secondary: rgb(var(--c-secondary) / <alpha-value>);
+  --color-accent: rgb(var(--c-accent) / <alpha-value>);
+  --color-background: rgb(var(--c-background) / <alpha-value>);
+  --color-foreground: rgb(var(--c-foreground) / <alpha-value>);
+  --color-card: rgb(var(--c-card) / <alpha-value>);
+  --color-border: rgb(var(--c-border) / <alpha-value>);
+
+  /* Status colors */
+  --color-success: rgb(var(--c-success) / <alpha-value>);
+  --color-error: rgb(var(--c-error) / <alpha-value>);
+  --color-warning: rgb(var(--c-warning) / <alpha-value>);
+  --color-info: rgb(var(--c-info) / <alpha-value>);
+}
+
+/* === Global Styles === */
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*::-webkit-scrollbar {
+  display: none;
+}

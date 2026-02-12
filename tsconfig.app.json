@@ -36,7 +36,7 @@
     "paths": {
       "@assets/*": ["./src/assets/*"],
       "@components/*": ["./src/components/*"],
-      "@config/*": ["./src/config/*"],
+      "@configs/*": ["./src/configs/*"],
       "@constants/*": ["./src/constants/*"],
       "@features/*": ["./src/features/*"],
       "@hooks/*": ["./src/hooks/*"],

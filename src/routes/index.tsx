@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouteObject } from "react-router";
 
-import App from "../App";
+import Login from "@pages/auth/Login";
 
 const routes: RouteObject[] = [
   {
     path: "/",
-    element: <App />,
+    element: <Login />,
   },
 ];
 
