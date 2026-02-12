@@ -1,1 +1,169 @@
 @import "tailwindcss";
+
+/* === Root Level Theme === */
+:root {
+  --color-primary: rgb(59 130 246);
+  --color-secondary: rgb(139 92 246);
+  --color-accent: rgb(236 72 153);
+  --color-background: rgb(255 255 255);
+  --color-foreground: rgb(15 23 42);
+  --color-card: rgb(248 250 252);
+  --color-border: rgb(226 232 240);
+  --color-success: rgb(34 197 94);
+  --color-error: rgb(239 68 68);
+  --color-warning: rgb(251 191 36);
+  --color-info: rgb(59 130 246);
+}
+
+/* === Default Light Theme === */
+[data-theme="default"][data-mode="light"] {
+  --color-primary: rgb(59 130 246);
+  --color-secondary: rgb(139 92 246);
+  --color-accent: rgb(236 72 153);
+  --color-background: rgb(255 255 255);
+  --color-foreground: rgb(15 23 42);
+  --color-card: rgb(248 250 252);
+  --color-border: rgb(226 232 240);
+  --color-success: rgb(34 197 94);
+  --color-error: rgb(239 68 68);
+  --color-warning: rgb(251 191 36);
+  --color-info: rgb(59 130 246);
+}
+
+/* === Default Dark Theme === */
+[data-theme="default"][data-mode="dark"] {
+  --color-primary: rgb(96 165 250);
+  --color-secondary: rgb(167 139 250);
+  --color-accent: rgb(244 114 182);
+  --color-background: rgb(15 23 42);
+  --color-foreground: rgb(248 250 252);
+  --color-card: rgb(30 41 59);
+  --color-border: rgb(51 65 85);
+  --color-success: rgb(74 222 128);
+  --color-error: rgb(248 113 113);
+  --color-warning: rgb(251 191 36);
+  --color-info: rgb(96 165 250);
+}
+
+/* === Ocean Theme Light ===  */
+[data-theme="ocean"][data-mode="light"] {
+  --color-primary: rgb(14 165 233);
+  --color-secondary: rgb(6 182 212);
+  --color-accent: rgb(20 184 166);
+  --color-background: rgb(240 249 255);
+  --color-foreground: rgb(12 74 110);
+  --color-card: rgb(224 242 254);
+  --color-border: rgb(186 230 253);
+  --color-success: rgb(20 184 166);
+  --color-error: rgb(239 68 68);
+  --color-warning: rgb(251 191 36);
+  --color-info: rgb(14 165 233);
+}
+
+/* === Ocean Theme Dark ===  */
+[data-theme="ocean"][data-mode="dark"] {
+  --color-primary: rgb(56 189 248);
+  --color-secondary: rgb(34 211 238);
+  --color-accent: rgb(45 212 191);
+  --color-background: rgb(8 47 73);
+  --color-foreground: rgb(224 242 254);
+  --color-card: rgb(12 74 110);
+  --color-border: rgb(14 116 144);
+  --color-success: rgb(45 212 191);
+  --color-error: rgb(248 113 113);
+  --color-warning: rgb(252 211 77);
+  --color-info: rgb(56 189 248);
+}
+
+/* === Forest Theme Light ===  */
+[data-theme="forest"][data-mode="light"] {
+  --color-primary: rgb(34 197 94);
+  --color-secondary: rgb(132 204 22);
+  --color-accent: rgb(74 222 128);
+  --color-background: rgb(240 253 244);
+  --color-foreground: rgb(20 83 45);
+  --color-card: rgb(220 252 231);
+  --color-border: rgb(187 247 208);
+  --color-success: rgb(34 197 94);
+  --color-error: rgb(239 68 68);
+  --color-warning: rgb(251 191 36);
+  --color-info: rgb(59 130 246);
+}
+
+/* === Forest Theme Dark ===  */
+[data-theme="forest"][data-mode="dark"] {
+  --color-primary: rgb(74 222 128);
+  --color-secondary: rgb(163 230 53);
+  --color-accent: rgb(134 239 172);
+  --color-background: rgb(20 83 45);
+  --color-foreground: rgb(240 253 244);
+  --color-card: rgb(22 101 52);
+  --color-border: rgb(34 197 94);
+  --color-success: rgb(74 222 128);
+  --color-error: rgb(248 113 113);
+  --color-warning: rgb(252 211 77);
+  --color-info: rgb(96 165 250);
+}
+
+/* === Sunset Theme Light ===  */
+[data-theme="sunset"][data-mode="light"] {
+  --color-primary: rgb(249 115 22);
+  --color-secondary: rgb(234 88 12);
+  --color-accent: rgb(251 146 60);
+  --color-background: rgb(255 251 235);
+  --color-foreground: rgb(67 20 7);
+  --color-card: rgb(254 243 199);
+  --color-border: rgb(253 186 116);
+  --color-success: rgb(34 197 94);
+  --color-error: rgb(239 68 68);
+  --color-warning: rgb(251 146 60);
+  --color-info: rgb(59 130 246);
+}
+
+/* === Sunset Theme Dark ===  */
+[data-theme="sunset"][data-mode="dark"] {
+  --color-primary: rgb(251 146 60);
+  --color-secondary: rgb(249 115 22);
+  --color-accent: rgb(253 186 116);
+  --color-background: rgb(67 20 7);
+  --color-foreground: rgb(254 243 199);
+  --color-card: rgb(124 45 18);
+  --color-border: rgb(194 65 12);
+  --color-success: rgb(74 222 128);
+  --color-error: rgb(248 113 113);
+  --color-warning: rgb(251 146 60);
+  --color-info: rgb(96 165 250);
+}
+
+@theme {
+  --color-primary: rgb(var(--c-primary) / <alpha-value>);
+  --color-secondary: rgb(var(--c-secondary) / <alpha-value>);
+  --color-accent: rgb(var(--c-accent) / <alpha-value>);
+  --color-background: rgb(var(--c-background) / <alpha-value>);
+  --color-foreground: rgb(var(--c-foreground) / <alpha-value>);
+  --color-card: rgb(var(--c-card) / <alpha-value>);
+  --color-border: rgb(var(--c-border) / <alpha-value>);
+
+  /* Status colors */
+  --color-success: rgb(var(--c-success) / <alpha-value>);
+  --color-error: rgb(var(--c-error) / <alpha-value>);
+  --color-warning: rgb(var(--c-warning) / <alpha-value>);
+  --color-info: rgb(var(--c-info) / <alpha-value>);
+}
+
+/* === Global Styles === */
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
